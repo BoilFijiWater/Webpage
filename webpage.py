@@ -17,20 +17,20 @@ def render_er():
     return render_template('page1.html')
     
 @app.route("/response1")
-def render_response():
+def render_response1():
     feet = float(request.args['feet'])
     reply = feet * 0.3048
-    return render_template('response.html',str(reply))
+    return render_template('response.html',response=str(reply))
    
 @app.route("/page2")
 def render_q():
     return render_template('page2.html')
     
 @app.route("/response2")
-def render_response():
-    feet = float(request.args['pounds'])
+def render_response2():
+    pounds = float(request.args['pounds'])
     reply = pounds * 0.453592 
-    return render_template('response.html',str(reply))
+    return render_template('response.html',response=str(reply))
 
     
     #The request object stores information about the request sent to the server.
